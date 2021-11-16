@@ -1,0 +1,9 @@
+        print(category.return_sp_products())
+        for j in category.return_sp_products():
+            button_y += 30
+            button = QPushButton(self.category_frame)
+            button.setGeometry(button_x, button_y, button_width, button_height)
+            button.setText(j.return_name())
+            button.clicked.connect(lambda checked, j=j: self.add_to_korzina(j))
+            print(1)
+            self.products_buttons.append(button)
